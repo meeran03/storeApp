@@ -15,6 +15,7 @@ function Header(props) {
         await signOut().then(res => {
             console.log(res)
         })
+        props.navigation.replace("AuthStack",{screen:"Login"})
     }
         return (
             

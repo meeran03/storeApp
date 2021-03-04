@@ -1,6 +1,6 @@
 
 import React from 'react'
-import {View,Text,Dimensions, ActivityIndicator,Button} from 'react-native';
+import {View,Text,Dimensions, ActivityIndicator,Button,StyleSheet} from 'react-native';
 import * as Location from 'expo-location';
 import * as Permissions from 'expo-permissions'
 import {Alert} from 'react-native'
@@ -50,15 +50,31 @@ function ChangeLocation() {
                     description="Some description"
                 />
             </MapView>
-            <Text>Your Location is :</Text>
-            <Text>{address}</Text>
-            <Button title="SET LOCATION" onPress={setLocationFun} />
+            <View style={styles.location}>
+                <Text>Your Location is :</Text>
+                <Text>{address}</Text>
+                <Button title="SET LOCATION" onPress={setLocationFun} color="#e94e87" />
+            </View>
         </View>
     )
 }
 
 export default ChangeLocation;
 
+
+const styles = StyleSheet.create({
+    location :{
+        margin: 10,
+        shadowColor: 'grey',
+        shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 8,
+        elevation: 5,
+        backgroundColor : "white",
+        padding : 10,
+        marginTop : height*0.1
+    }
+})
 
 export async function getLocation() {
     const { status } = await Permissions.askAsync(Permissions.LOCATION);

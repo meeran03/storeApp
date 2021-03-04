@@ -9,6 +9,7 @@ import Header from '../../Components/Header'
 let chatsocket = socket()
 
 class Orders extends React.Component {
+    chatsocket = socket()
     constructor() {
         super();
         this.state = {
@@ -19,7 +20,6 @@ class Orders extends React.Component {
     
   componentDidMount() {
     getOrders().then(res => {
-        console.log(res)
         this.setState({data : (res),loading:false})
 
     })

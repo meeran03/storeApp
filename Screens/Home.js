@@ -5,6 +5,7 @@ import {View,Text,ScrollView} from 'react-native'
 //Here we import our components
 import Header from '../Components/Header'
 import Location from '../Components/Main/Location'
+import StoreInfo from '../Components/Main/StoreInfo'
 
 //Our Services
 import {registerForPushNotificationsAsync} from '../Services/PushNotifications'
@@ -21,6 +22,7 @@ function Home(props) {
             <Header title="Home" navigation={props.navigation} />
             <ScrollView>
                 <Location navigation={props.navigation}/>
+                <StoreInfo />
             </ScrollView>
         </View>
     )

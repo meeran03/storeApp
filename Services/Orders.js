@@ -11,7 +11,10 @@ import {encode as btoa} from 'base-64'
 
 export async function getOrders() {
     const token = await AsyncStorage.getItem('token')
-    return axios.get('/order/?status=ACTIVE',{
+    const store = await AsyncStorage.getItem('store')
+    const storeData = JSON.parse(store)
+    console.log(storeData)
+    return axios.get('/order/?exclude=DELIVERED&store=' + storeData.id,{
         headers : {
             "Authorization" : `Bearer ${token}`
         }

@@ -85,9 +85,6 @@ class Orders extends React.Component {
                     >
                         <Text style={{color:"white"}}>TRACK ORDER</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{backgroundColor:"#e94e87",padding:8}}>
-                        <Text style={{color:"white"}}>COMPLETE</Text>
-                    </TouchableOpacity>
                 </View>
 
             </View>

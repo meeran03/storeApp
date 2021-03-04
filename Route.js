@@ -140,9 +140,7 @@ function Routes() {
                 <Stack.Screen name="Notification" component={Notification}  options={{
                     headerShown : false,
                 }} />
-                <Stack.Screen name="Change Location" component={ChangeLocation}  options={{
-                    headerShown : false,
-                }} />
+                <Stack.Screen name="Change Location" component={ChangeLocation}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
